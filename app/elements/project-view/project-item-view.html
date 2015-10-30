@@ -1,0 +1,42 @@
+<link rel="import" href="../../bower_components/polymer/polymer.html">
+<script src="../../bower_components/lodash/lodash.js"></script>
+
+<dom-module id="project-item-view">
+  <template>
+    <div id="dynamic"></div>
+  </template>
+  <script>
+    (function () {
+      'use strict';
+
+      Polymer({
+        is: 'project-item-view',
+        properties: {
+          viewname: {
+            type: String,
+            value: '',
+            observer: 'viewnameChanged',
+          },
+          viewdata: {
+            type: String,
+            value: '',
+          },
+          elem: {
+            type: Object,
+          }
+        },
+        viewnameChanged: function() {
+          if (this.elem) {
+            this.elem.remove();
+          }
+          if (this.viewname) {
+            this.elem = document.createElement(this.viewname);
+            this.elem.viewdata = this.viewdata;
+            Polymer.dom(this.$.dynamic).appendChild(this.elem);
+          }
+        },
+      });
+    })();
+  </script>
+
+</dom-module>

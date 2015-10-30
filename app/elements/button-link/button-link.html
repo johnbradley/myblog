@@ -1,0 +1,20 @@
+<link rel="import" href="../../bower_components/polymer/polymer.html">
+<dom-module id="button-link">
+  <template>
+      <paper-button raised on-click="handleClick"><content></content></paper-button>
+  </template>
+  <script>
+    Polymer({
+      is: 'button-link',
+      properties: {
+        link: {
+          type: String,
+          value: '',
+        },
+      },
+      handleClick: function() {
+        window.location.href = this.link;
+      }
+    });
+  </script>
+</dom-module>

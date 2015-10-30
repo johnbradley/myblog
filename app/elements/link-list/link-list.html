@@ -1,0 +1,43 @@
+<link rel="import" href="../../bower_components/polymer/polymer.html">
+
+<dom-module id="link-list">
+  <template>
+    <style>
+      :host {
+        display: block;
+      }
+    </style>
+    <iron-ajax
+        url="{{url}}"
+        params="{}"
+        handle-as="text"
+        on-response="handleResponse" auto></iron-ajax>
+    <template is="dom-repeat" items="{{items}}">
+        <div><a href$="{{item.url}}" class="paper-font-body1">{{item.title}}</a></div>
+    </template>
+  </template>
+
+  <script>
+    (function () {
+      'use strict';
+
+      Polymer({
+        is: 'link-list',
+        properties: {
+          url: {
+            type: String,
+            value: '',
+          },
+          items: {
+            type: Array,
+            notify: true,
+          },
+        },
+        handleResponse: function(somedata) {
+          this.items = JSON.parse(somedata.detail.response);
+        },
+      });
+    })();
+  </script>
+
+</dom-module>

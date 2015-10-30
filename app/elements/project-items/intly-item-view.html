@@ -1,0 +1,32 @@
+<link rel="import" href="../../bower_components/polymer/polymer.html">
+<dom-module id="intly-item-view">
+  <template>
+    <section>
+      <div>
+        Example code to print sum of numbers from N to 1:
+        <pre>
+        main(target) {
+          result = 0;
+          while target {
+            result += target
+            target = target - 1;
+          }
+          return result;
+        }
+        </pre>
+        This was a fun project creating a tiny language to play with <a href="http://www.antlr.org/">Antlr<a/>.
+        All data types are integer. All functions are passed and return integers.
+        The value returned by the main method is printed to std out.
+      </div>
+      <button-link link="https://github.com/johnbradley/Intly">
+        View on github
+      </button-link>
+
+  </section>
+  </template>
+  <script>
+    Polymer({
+      is: 'intly-item-view'
+    });
+  </script>
+</dom-module>

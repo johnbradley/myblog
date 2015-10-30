@@ -1,0 +1,44 @@
+[{
+  "key": "blog",
+  "title": "Polymer/github Blog",
+  "desc": "This blog was created with gulp/polymer/js/html/css and hosted on github.",
+  "view" : "blog-item-view",
+  "type": "current"
+}, {
+  "key": "bioseq",
+  "title": "Python DNA/Protein Web App",
+  "desc": "Python REST API and polymer front end for working with DNA/Protein files.",
+  "view" : "bioseq-item-view",
+  "type": "current"
+}, {
+  "key": "jsontodb",
+  "title": "JSON to RDBMS normalized",
+  "desc": "REST server that decomposes JSON into normalized database tables.",
+  "view" : "jsontodb-item-view",
+  "type": "current"
+},
+{
+    "key": "hexwords",
+    "title": "Hexwords",
+    "desc": "JQuery/SVG based business card password generator.",
+    "view" : "hexwords-item-view",
+    "type": "past"
+  }, {
+    "key": "intly",
+    "title": "Intly",
+    "desc": "Antlr LL* parser and interpreter for integer based scripting language.",
+    "view" : "intly-item-view",
+    "type": "past"
+  }, {
+    "key": "roboteye",
+    "title": "Robot Eye",
+    "desc": "Servo Eye controled via controller and via python webserver.",
+    "view" : "roboteye-item-view",
+    "type": "past"
+  }, {
+    "key": "rfidserver",
+    "title": "Embedded RFID Webserver",
+    "desc": "Playing around with embedded C programming webserver and RFID reader.",
+    "view" : "rfidserver-item-view",
+    "type": "past"
+  }]

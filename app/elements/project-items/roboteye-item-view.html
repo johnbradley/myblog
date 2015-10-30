@@ -1,0 +1,30 @@
+<link rel="import" href="../bower_components/polymer/polymer.html">
+
+<dom-module id="roboteye-item-view">
+  <template>
+    <section>
+      <google-youtube
+           video-id="H6P35rm8d48"
+           height="270px"
+           width="480px"
+           rel="0"
+           start="5"
+           autoplay="0"
+         >
+      </google-youtube>
+      <p>
+        Built with an <a href="https://www.arduino.cc/">Ardiuno<a> and two cheap(loud) servos from china.
+        The arduino handles reading the two control knobs.
+        It also listens for commands sent over the usb cable.
+        On my laptop there was a twisted python webserver talking to the Arduino.
+        This allowed it to be controlled via the cellphone in the video.
+
+      </p>
+  </section>
+  </template>
+  <script>
+    Polymer({
+      is: 'roboteye-item-view'
+    });
+  </script>
+</dom-module>

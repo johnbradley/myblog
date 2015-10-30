@@ -1,0 +1,25 @@
+<link rel="import" href="../../bower_components/polymer/polymer.html">
+<dom-module id="bioseq-item-view">
+  <template>
+    <section>
+      <p class="paper-font-body1">
+      The site uses iron-ajax to fetch data from the Python REST API.
+      </p>
+      <button-link link="https://github.com/johnbradley/seq_exp_web">
+        View frontend project on github.
+      </button-link>
+      <p class="paper-font-body1">
+        The site stores project info in a relational database(postgres right now).
+        Considering changing this into a directory structure to better store downloading genbank files.
+      </p>
+      <button-link link="https://github.com/johnbradley/seq_exp_rest">
+        View Python flask project on github.
+      </button-link>
+  </section>
+  </template>
+  <script>
+    Polymer({
+      is: 'bioseq-item-view'
+    });
+  </script>
+</dom-module>

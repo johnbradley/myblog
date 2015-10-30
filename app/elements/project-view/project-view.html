@@ -1,0 +1,95 @@
+<link rel="import" href="../../bower_components/polymer/polymer.html">
+<script src="../../bower_components/lodash/lodash.js"></script>
+
+<dom-module id="project-view">
+  <template>
+    <style>
+      :host {
+        display: block;
+      }
+    </style>
+
+
+
+    <iron-ajax
+        url="{{url}}"
+        params="{}"
+        handle-as="text"
+        on-response="handleResponse" auto></iron-ajax>
+    <div><span class="paper-font-body2">{{item.title}}</span></div>
+    <div><span class="paper-font-body1">{{item.desc}}</span></div>
+    <project-item-view viewname$="{{item.view}}"></project-item-view>
+
+    <template is="dom-repeat" id="itemList" items="{{item.content}}" as="content">
+      <template is="dom-if" if="{{content.img}}">
+        <div><img style="width:50%;" src$="{{content.img}}"></img></div>
+      </template>
+      <template is="dom-if" if="{{content.text}}">
+        <div><span class="paper-font-body1">{{content.text}}</span></div>
+      </template>
+      <template is="dom-if" if="{{content.link}}">
+        <div><a href$="{{content.link}}">{{content.label}}</a></div>
+      </template>
+      <template is="dom-if" if="{{content.youtube}}">
+         <google-youtube
+              video-id="[[content.youtube]]"
+              height="270px"
+              width="480px"
+              rel="0"
+              start="5"
+              autoplay="0"
+            >
+            </google-youtube>
+        </template>
+
+    </template>
+
+
+
+  </template>
+
+  <script>
+    (function () {
+      'use strict';
+
+      Polymer({
+        is: 'project-view',
+        properties: {
+          url: {
+            type: String,
+            value: '',
+          },
+          items: {
+            type: Array,
+            notify: true,
+          },
+          item: {
+            type: Object,
+            notify: true,
+          },
+          index: {
+            type: String,
+            notify: true,
+            observer: '_indexChanged',
+          },
+        },
+        _indexChanged: function() {
+            this.loadData();
+        },
+        handleResponse: function(somedata) {
+          this.items = JSON.parse(somedata.detail.response);
+          this.loadData();
+        },
+        hasLink: function(item) {
+          return item.url;
+        },
+        loadData: function() {
+          if (this.index && this.items) {
+            this.item = _.findWhere(this.items, { 'key': this.index});
+          }
+        },
+      });
+    })();
+  </script>
+
+</dom-module>

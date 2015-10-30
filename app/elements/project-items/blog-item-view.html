@@ -1,0 +1,25 @@
+<link rel="import" href="../../bower_components/polymer/polymer.html">
+<dom-module id="blog-item-view">
+  <template>
+    <section>
+      <p>
+        <span class="paper-font-body1">
+          The goal of this was to learn more about polymer.
+          The free github hosting doesn't refresh if index.html isn't changed every time.
+          To work around this I modified gulpfile.js to add a comment timestamp to index.html.
+          Using polymer for a blog like this is a little silly as it is mostly static data.
+          The project was created with yeoman: 'yo polymer'.
+          Using bower as a dependancy manager.
+        </span>
+      </p>
+      <button-link link="https://github.com/johnbradley/myblog">
+        View on github.
+      </button-link>
+  </section>
+  </template>
+  <script>
+    Polymer({
+      is: 'blog-item-view'
+    });
+  </script>
+</dom-module>

@@ -1,0 +1,40 @@
+<link rel="import" href="../../bower_components/polymer/polymer.html">
+<script src="../../bower_components/lodash/lodash.js"></script>
+
+<dom-module id="project-item">
+  <template>
+    <style>
+    </style>
+
+  </template>
+
+  <script>
+    (function () {
+      'use strict';
+
+      Polymer({
+        is: 'project-item',
+        properties: {
+          type: {
+            type: String,
+            value: '',
+          },
+          key: {
+            type: Array,
+            notify: true,
+          },
+          item: {
+            type: Object,
+            notify: true,
+          },
+          index: {
+            type: String,
+            notify: true,
+            observer: '_indexChanged',
+          },
+        }
+      });
+    })();
+  </script>
+
+</dom-module>

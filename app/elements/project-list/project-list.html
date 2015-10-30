@@ -1,0 +1,79 @@
+<link rel="import" href="../../bower_components/polymer/polymer.html">
+
+<dom-module id="project-list">
+  <template>
+    <style>
+      :host {
+        display: block;
+      }
+
+      .item {
+        padding: 0.5em;
+        padding-left: 1em;
+        display: inline-block;
+        position: relative;
+        width: 100%;
+        cursor: pointer;
+        cursor: hand;
+      }
+
+      .item:hover {
+        background: var(--paper-light-blue-50);
+      }
+
+      .item:active {
+        background: var(--light-primary-color);
+      }
+
+
+    </style>
+    <iron-ajax
+        url="{{url}}"
+        params="{}"
+        handle-as="text"
+        on-response="handleResponse" auto></iron-ajax>
+      <template is="dom-repeat" id="itemList" items="{{items}}" filter="checkType">
+        <div>
+          <div class="item" fit on-click="handleClick" data-index="[[index]]">
+            <div><span class="paper-font-body2">{{item.title}}</span></div>
+            <div><span class="paper-font-body1">{{item.desc}}</span></div>
+          </div>
+        </div>
+      </template>
+  </template>
+
+  <script>
+    (function () {
+      'use strict';
+
+      Polymer({
+        is: 'project-list',
+        properties: {
+          url: {
+            type: String,
+            value: '',
+          },
+          items: {
+            type: Array,
+            notify: true,
+          },
+          typeFilter: {
+            type: String,
+            value: 'current',
+          },
+        },
+        checkType: function(item) {
+          return item.type === this.typeFilter;
+        },
+        handleClick: function(e) {
+          var item = this.$.itemList.itemForElement(e.target);
+          page('/projects/' + item.key);
+        },
+        handleResponse: function(somedata) {
+          this.items = JSON.parse(somedata.detail.response);
+        }
+      });
+    })();
+  </script>
+
+</dom-module>

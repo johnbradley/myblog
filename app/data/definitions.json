@@ -1,0 +1,103 @@
+[{
+  "term": "protein",
+  "def": "Molecule of amino acid residue chains."
+}, {
+  "term": "enzyme",
+  "def": "Protein or ribozyme that accelerates a chemical reaction."
+}, {
+  "term": "ribozyme",
+  "def": "RNA that accelerates a chemical reaction."
+}, {
+  "term": "bacteriophage",
+  "def": "Really prevalent tiny virus inside bacteria."
+}, {
+  "term": "ATP synthase",
+  "def": "Enzyme that provides energy for cells by converting ADP into ATP releasing energy."
+}, {
+  "term": "Lysozyme",
+  "def": "Enzyme part of immune system that damage bacteria cell walls."
+}, {
+  "term": "Lysosomal Enzyme",
+  "def": "Enzyme that breaks down protein, nucleic acids, etc when they are no longer needed."
+}, {
+  "term": "homology",
+  "def": "Shared ancestry between structures or genes, sometimes incorrectly used as similarity."
+}, {
+  "term": "β sheet",
+  "def": "Laterally connected beta strands with hydrogen bonds."
+}, {
+  "term": "beta strand",
+  "def": "Polypeptide part of a protein."
+}, {
+  "term": "Chargaff\"s rules",
+  "def": "1:1 ratio between A to T and G to C in DNA(Not in RNA or Protein)"
+}, {
+  "term": "SNP",
+  "def": "(snip) Single Nucleotide Polymophism. A piece of DNA in a population with single nucleotide that varies."
+}, {
+  "term": "A",
+  "def": "Adenine"
+}, {
+  "term": "C",
+  "def": "Cytosine"
+}, {
+  "term": "G",
+  "def": "Guanine"
+}, {
+  "term": "T",
+  "def": "Thymine"
+}, {
+  "term": "U",
+  "def": "Uracil"
+}, {
+  "term": "Transcription",
+  "def": "Process of creating RNA from DNA"
+}, {
+  "term": "Translation",
+  "def": "Process of creating Protein from RNA"
+}, {
+  "term": "Central Dogma",
+  "def": "DNA -> RNA -> Protein"
+}, {
+  "term": "mRNA",
+  "def": "Messenger RNA. Created DNA recipe copied with T-> U."
+}, {
+  "term": "ribosome",
+  "def": "Converts mRNA into a protien."
+}, {
+  "term": "tRNA",
+  "def": "Carries one amino acid that is used by ribosome to create protein from mRNA."
+}, {
+  "term": "rRNA",
+  "def": "RNA that forms part of the structure of the ribosome."
+}, {
+  "term": "rRNA",
+  "def": "RNA that forms part of the structure of the ribosome."
+}, {
+  "term": "Polymerases",
+  "def": "Enzyme that catalizes the biosynthesis of DNA or RNA."
+}, {
+  "term": "Coding Strand",
+  "def": "Strand that matches RNA we are building(with t->U replacement)."
+}, {
+  "term": "Template Strand",
+  "def": "Strand that is used to build RNA(is inverse of RNA)."
+}, {
+  "term": "Archaea",
+  "def": "Weird lifeform that lives in bottom of ocean kind of like bacterial kind of like eukaryotes(people/plants)."
+}, {
+  "term": "Start Codon",
+  "def": "AUG"
+}, {
+  "term": "Stop Codon",
+  "def": "UAG, UAA, or UGA (for RNA)"
+}, {
+  "term": "Protease",
+  "def": "Break(hydrolyze) down proteins."
+}, {
+  "term": "Myoglobin",
+  "def": "Oxygen carrying pigment of muscle tissue."
+  }, {
+    "term": "Isoform",
+    "def": "Functionally similar proteins with not quite identical amino acid content."
+    }]
