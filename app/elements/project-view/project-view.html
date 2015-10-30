@@ -9,8 +9,6 @@
       }
     </style>
 
-
-
     <iron-ajax
         url="{{url}}"
         params="{}"
@@ -19,32 +17,6 @@
     <div><span class="paper-font-body2">{{item.title}}</span></div>
     <div><span class="paper-font-body1">{{item.desc}}</span></div>
     <project-item-view viewname$="{{item.view}}"></project-item-view>
-
-    <template is="dom-repeat" id="itemList" items="{{item.content}}" as="content">
-      <template is="dom-if" if="{{content.img}}">
-        <div><img style="width:50%;" src$="{{content.img}}"></img></div>
-      </template>
-      <template is="dom-if" if="{{content.text}}">
-        <div><span class="paper-font-body1">{{content.text}}</span></div>
-      </template>
-      <template is="dom-if" if="{{content.link}}">
-        <div><a href$="{{content.link}}">{{content.label}}</a></div>
-      </template>
-      <template is="dom-if" if="{{content.youtube}}">
-         <google-youtube
-              video-id="[[content.youtube]]"
-              height="270px"
-              width="480px"
-              rel="0"
-              start="5"
-              autoplay="0"
-            >
-            </google-youtube>
-        </template>
-
-    </template>
-
-
 
   </template>
 

@@ -26,7 +26,9 @@
           }
         },
         viewnameChanged: function() {
+          console.log('view:' + this.viewname);
           if (this.elem) {
+            console.log('remove');
             this.elem.remove();
           }
           if (this.viewname) {
