@@ -11,8 +11,6 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
 
 // Include Gulp & tools we'll use
 var gulp = require('gulp');
-var insert = require('gulp-insert');
-var insertComment = '<!--Generated on:' + Date() + '-->';
 var $ = require('gulp-load-plugins')();
 var del = require('del');
 var runSequence = require('run-sequence');
@@ -55,7 +53,7 @@ var jshintTask = function (src) {
   return gulp.src(src)
     .pipe($.jshint.extract()) // Extract JS from .html files
     .pipe($.jshint())
-    .pipe($.jshint.reporter('jshint-stylish'), {verbose: true})
+    .pipe($.jshint.reporter('jshint-stylish'))
     .pipe($.if(!browserSync.active, $.jshint.reporter('fail')));
 };
 
@@ -151,10 +149,7 @@ gulp.task('copy', function () {
     .pipe($.rename('elements.vulcanized.html'))
     .pipe(gulp.dest('dist/elements'));
 
-  var data = gulp.src(['app/data/*.json'])
-    .pipe(gulp.dest('dist/data'));
-
-  return merge(app, bower, elements, vulcanized, swBootstrap, swToolbox, data)
+  return merge(app, bower, elements, vulcanized, swBootstrap, swToolbox)
     .pipe($.size({title: 'copy'}));
 });
 
@@ -177,7 +172,6 @@ gulp.task('html', function () {
 gulp.task('vulcanize', function () {
   return gulp.src('dist/index.html')
     .pipe(polybuild({maximumCrush: true}))
-    .pipe(insert.append(insertComment))
     .pipe(gulp.dest('dist/'));
 });
 
