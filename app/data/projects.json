@@ -5,6 +5,12 @@
   "view" : "blog-item-view",
   "type": "current"
 }, {
+  "key": "learnbio",
+  "title": "Bioinformatics",
+  "desc": "My progress learning bioinformatics.",
+  "view" : "learnbio-item-view",
+  "type": "current"
+  }, {
   "key": "bioseq",
   "title": "Python DNA/Protein Web App",
   "desc": "Python REST API and polymer front end for working with DNA/Protein files.",
