@@ -159,7 +159,7 @@ gulp.task('copy', function () {
     .pipe(gulp.dest('dist/elements'));
 
 
-  return merge(app, bower, data, images, elements, vulcanized, swBootstrap, swToolbox)
+  return merge(app, bower, data, images, images_touch, elements, vulcanized, swBootstrap, swToolbox)
     .pipe($.size({title: 'copy'}));
 });
 
