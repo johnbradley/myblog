@@ -17,6 +17,12 @@
   "view" : "bioseq-item-view",
   "type": "current"
 }, {
+  "key": "biodictionary",
+  "title": "Firebase/Polymer bio informatics dictionary",
+  "desc": "Web App to record terms/definitions as I learn about bioinformatics.",
+  "view" : "bioseq-item-view",
+  "type": "current"
+  }, {
   "key": "jsontodb",
   "title": "JSON to RDBMS normalized",
   "desc": "REST server that decomposes JSON into normalized database tables.",

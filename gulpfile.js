@@ -145,6 +145,9 @@ gulp.task('copy', function () {
   var images = gulp.src(['app/images/*.*'])
     .pipe(gulp.dest('dist/images'));
 
+  var images_touch = gulp.src(['app/images/touch/*.*'])
+    .pipe(gulp.dest('dist/images/touch'));
+
   var swBootstrap = gulp.src(['bower_components/platinum-sw/bootstrap/*.js'])
     .pipe(gulp.dest('dist/elements/bootstrap'));
 

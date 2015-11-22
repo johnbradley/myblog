@@ -23,7 +23,7 @@
   "term": "homology",
   "def": "Shared ancestry between structures or genes, sometimes incorrectly used as similarity."
 }, {
-  "term": "β sheet",
+  "term": "Beta sheet",
   "def": "Laterally connected beta strands with hydrogen bonds."
 }, {
   "term": "beta strand",
@@ -100,4 +100,40 @@
   }, {
     "term": "Isoform",
     "def": "Functionally similar proteins with not quite identical amino acid content."
+    },
+  {
+    "term": "E VALUE",
+    "def": "Value returned from BLAST representing possible homology. E = (database size in bits)/(score in bits). Homologous or related if E < 10^-4"
+    },
+  {
+    "term": "isoelectric point",
+    "def": "Ph where a molecule has no electrical charge"
+    },
+  {
+    "term": "posttranslational modifications",
+    "def": "modifications to a protein after conversion from RNA"
+    },
+  {
+    "term": "subcellular localization",
+    "def": "protein is transported to a cell compartment"
+    },
+  {
+    "term": "cytoplasm",
+    "def": "thick solution that fills each cell enclosed by the cell membrane"
+    },
+  {
+    "term": "Anfinsen Hypothesis",
+    "def": "Amino acid sequence determines protein structure."
+    },
+  {
+    "term": "Aliphatic",
+    "def": "non aromatic"
+    },
+  {
+    "term": "Intron",
+    "def": "a non coding region of RNA"
+    },
+  {
+    "term": "Exon",
+    "def": "a coding region of RNA"
     }]
