@@ -145,7 +145,7 @@ gulp.task('copy', function () {
   var images = gulp.src(['app/images/*.*'])
     .pipe(gulp.dest('dist/images'));
 
-  var images_touch = gulp.src(['app/images/touch/*.*'])
+  var imagesTouch = gulp.src(['app/images/touch/*.*'])
     .pipe(gulp.dest('dist/images/touch'));
 
   var swBootstrap = gulp.src(['bower_components/platinum-sw/bootstrap/*.js'])
@@ -159,7 +159,7 @@ gulp.task('copy', function () {
     .pipe(gulp.dest('dist/elements'));
 
 
-  return merge(app, bower, data, images, images_touch, elements, vulcanized, swBootstrap, swToolbox)
+  return merge(app, bower, data, images, imagesTouch, elements, vulcanized, swBootstrap, swToolbox)
     .pipe($.size({title: 'copy'}));
 });
 
